@@ -332,11 +332,6 @@ namespace UnityEditor.Rendering.Universal
                 string warningInfo = "Camera is missing";
                 EditorGUI.LabelField(rect, m_NameContent, TempContent("", warningInfo, m_ErrorIcon), errorStyle);
 
-                // We shouldn't do this!
-                // Automagicaly deletes the entry if a user has removed a camera from the scene
-                //m_AdditionalCameraDataCameras.DeleteArrayElementAtIndex(index);
-                //m_AdditionalCameraDataSO.ApplyModifiedProperties();
-
                 // Need to clean out the errorCamera list here.
                 errorCameras.Clear();
             }
