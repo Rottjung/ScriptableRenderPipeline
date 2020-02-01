@@ -10,7 +10,7 @@ void SurfaceGradientGenBasisTB(float3 nrmVertexNormal, float3 sigmaX, float3 sig
 
     // invC0 represents (dXds, dYds); but we don't divide by determinant (scale by sign instead)
     float2 invC0 = sign_det * float2(dSTdy.y, -dSTdx.y);
-    vT = sigmaX * invC0.x + sigmaY * invC0.y; 
+    vT = sigmaX * invC0.x + sigmaY * invC0.y;
     if (abs(det) > 0.0)
         vT = normalize(vT);
     vB = (sign_det * flipSign) * cross(nrmVertexNormal, vT);
